@@ -1,0 +1,7 @@
+spring:
+  redis:
+    host: hillewaere-poc.redis.cache.windows.net
+    port: 6380
+    ssl: true
+    password: wpKshnHMGrsbgKOR9YSexe5BpdXXS0pP9AzCaCP1GDQ=
+    timeout: 5s
