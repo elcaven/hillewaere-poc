@@ -5,3 +5,7 @@ spring:
     ssl: true
     password: wpKshnHMGrsbgKOR9YSexe5BpdXXS0pP9AzCaCP1GDQ=
     timeout: 5s
+  cache:
+    type: redis
+    redis:
+      time-to-live: 86400000
