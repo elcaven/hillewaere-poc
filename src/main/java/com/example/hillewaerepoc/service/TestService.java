@@ -19,6 +19,8 @@ public class TestService {
   }
 
   public List<TestObject> findAll() {
-    return repo.findAll("parameter-1", "parameter-2");
+    List<TestObject> output = repo.findAll("parameter-1", "parameter-2");
+    System.out.println(output);
+    return output;
   }
 }
