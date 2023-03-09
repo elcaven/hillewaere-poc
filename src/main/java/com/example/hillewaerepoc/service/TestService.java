@@ -19,8 +19,14 @@ public class TestService {
   }
 
   public List<TestObject> findAll() {
+<<<<<<< HEAD
     List<TestObject> objects = repo.findAll("param-1", "param-2");
     System.out.println("This is a output log line");
     return objects;
+=======
+    List<TestObject> output = repo.findAll("parameter-1", "parameter-2");
+    System.out.println(output);
+    return output;
+>>>>>>> branch 'main' of git@github.com:elcaven/hillewaere-poc.git
   }
 }
