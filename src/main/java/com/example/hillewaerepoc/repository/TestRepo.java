@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class TestRepo {
 
-  @Cacheable(value = "result_by_id", unless = "#result==null")
+//  @Cacheable(value = "result_by_id", unless = "#result==null")
   public TestObject findById(String id) {
     System.out.println("findById - Reading from database");
 
@@ -20,7 +20,7 @@ public class TestRepo {
     return object;
   }
 
-  @Cacheable(value = "all_results", unless = "#result==null or #result.size()==0")
+//  @Cacheable(value = "all_results", unless = "#result==null or #result.size()==0")
   public List<TestObject> findAll(String param1, String param2) {
     System.out.println("findAll - Reading from database");
     List<TestObject> output = new ArrayList<>();
