@@ -25,7 +25,7 @@ public class TestService {
 
   public List<TestObject> findAll() {
     List<TestObject> output = repo.findAll("parameter-1", "parameter-2");
-    logger.info("Found {} objects", output.size());
+    logger.info("findAll - Found {} objects", output.size());
     return output;
   }
 }

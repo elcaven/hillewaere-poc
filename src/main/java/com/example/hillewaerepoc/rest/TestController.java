@@ -23,14 +23,14 @@ public class TestController {
 
   @GetMapping("/{id}")
   public ResponseEntity<Void> findById(@PathVariable String id) {
-    logger.info("Finding by id {}", id);
+    logger.info("findById - Finding by id {}", id);
     service.findById(id);
     return ResponseEntity.ok().build();
   }
 
   @GetMapping
   public ResponseEntity<Void> findAll() {
-    logger.info("Finding all");
+    logger.info("findAll - Finding all");
     service.findAll();
     return ResponseEntity.ok().build();
   }

@@ -2,7 +2,7 @@ package com.example.hillewaerepoc.core;
 
 public class RequestScope {
   public static InheritableThreadLocal<String> CORRELATION_ID =
-      new MdcSynchronizedInheritableThreadLocal("correlation.id");
+      new MdcSynchronizedInheritableThreadLocal("correlationId");
 
   private RequestScope() {}
 

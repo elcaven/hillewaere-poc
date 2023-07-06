@@ -19,6 +19,10 @@ public class TestRepo {
   public TestObject findById(String id) {
     logger.info("findById - Reading from database");
 
+    if ("error".equals(id)) {
+      logger.error("findById - error occurred");
+    }
+
     TestObject object = new TestObject();
     object.setId(UUID.randomUUID().toString());
     object.setName("Test Name");
