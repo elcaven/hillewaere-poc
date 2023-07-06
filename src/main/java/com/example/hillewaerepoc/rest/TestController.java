@@ -1,6 +1,8 @@
 package com.example.hillewaerepoc.rest;
 
 import com.example.hillewaerepoc.service.TestService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class TestController {
 
+  private final Logger logger = LoggerFactory.getLogger(TestController.class);
+
   private final TestService service;
 
   public TestController(TestService service) {
@@ -19,12 +23,14 @@ public class TestController {
 
   @GetMapping("/{id}")
   public ResponseEntity<Void> findById(@PathVariable String id) {
+    logger.info("Finding by id {}", id);
     service.findById(id);
     return ResponseEntity.ok().build();
   }
 
   @GetMapping
   public ResponseEntity<Void> findAll() {
+    logger.info("Finding all");
     service.findAll();
     return ResponseEntity.ok().build();
   }
